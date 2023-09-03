@@ -1,0 +1,11 @@
+<div class="flex flex-wrap items-center gap-4">
+  <% @products.each do |product| %>
+    <div class="product bg-white rounded-lg shadow-md overflow-hidden">
+      <%= image_tag product.image_url,  class: "product-image w-full max-w-xs mx-auto"  %>
+      <div class="product-details p-4">
+        <h2 class="text-lg font-semibold mb-2"><%= product.name %></h2>
+        <p class="text-gray-700"><strong>Price:</strong> <%= product.price %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

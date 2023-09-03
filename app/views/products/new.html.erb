@@ -1,0 +1,17 @@
+<%= form_with(model: @product, url: products_path, local: true) do |form| %>
+  <div class="mb-4">
+    <%= form.label :name, class: "block font-medium" %>
+    <%= form.text_field :name, class: "mt-1 p-2 border rounded w-full" %>
+  </div>
+  <div class="mb-4">
+    <%= form.label :price, class: "block font-medium" %>
+    <%= form.number_field :price, class: "mt-1 p-2 border rounded w-full" %>
+  </div>
+  <div class="mb-4">
+    <%= form.label :image_url, class: "block font-medium" %>
+    <%= form.text_field :image_url, class: "mt-1 p-2 border rounded w-full" %>
+  </div>
+  <div class="mb-4">
+    <%= form.button "Create Product", type: 'submit', class: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" %>
+  </div>
+<% end %>
